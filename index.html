@@ -6,6 +6,187 @@
     <title>HeyCaddyAI - Your Intelligent Golf Companion</title>
     <style>
         body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+
+        header {
+            background: #2d5a27;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .app-icon {
+            background-image: url('app-icon.png');
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin: 10px 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            background-color: #2d5a27;
+        }
+
+        .header-text { text-align: left; }
+        .header-text h1 { margin: 0; font-size: 2.8em; letter-spacing: -1px; }
+        .header-text p { margin: 5px 0 0 0; font-size: 1.2em; opacity: 0.9; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2d5a27;
+            margin: 40px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d4e8d0;
+        }
+
+        .feature { margin-bottom: 20px; padding: 25px; border-radius: 12px; background: #f4f7f4; border-left: 5px solid #2d5a27; }
+        .feature h3 { margin-top: 0; color: #2d5a27; display: flex; align-items: center; gap: 10px; }
+        .feature p { margin-bottom: 0; }
+        .feature ul { margin: 8px 0 0 0; padding-left: 20px; }
+        .feature ul li { margin-bottom: 4px; }
+
+        .btn { display: inline-block; background: #2d5a27; color: white; padding: 15px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; margin-top: 20px; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); }
+
+        footer { margin-top: 60px; padding: 30px; font-size: 0.9em; color: #777; border-top: 1px solid #eee; text-align: center; }
+        a.legal-link { color: #2d5a27; text-decoration: none; margin: 0 15px; font-weight: 500; }
+        a.legal-link:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .header-text { text-align: center; }
+            .app-icon { margin: 0 0 20px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="app-icon"></div>
+        <div class="header-text">
+            <h1>HeyCaddyAI</h1>
+            <p>The smartest caddie in your pocket (and on your wrist).</p>
+        </div>
+    </div>
+</header>
+
+<div class="container" style="text-align: center;">
+
+    <p style="font-size: 1.1em; color: #555; max-width: 620px; margin: 0 auto 10px auto; text-align: center;">
+        HeyCaddyAI combines AI-powered voice assistance, live GPS course maps, and automatic shot tracking
+        into one app — so you can focus on your game, not your phone.
+    </p>
+
+    <a href="#" class="btn">Coming Soon to Google Play</a>
+
+    <!-- ── ON-COURSE ASSISTANCE ── -->
+    <div class="section-title">🏌️ On-Course Assistance</div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🎙️ Voice Commands</h3>
+        <p>Talk to your caddie hands-free. Ask for distances, log shots, request hazard information, and track stats — all without touching a screen. Activate by pressing your earbud button, or turn on Always Listening mode and just say <em>"Hey Caddy"</em>.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🔋 Pocket-Mode Background Service</h3>
+        <p>Slip your phone in your pocket and keep playing. HeyCaddyAI's background service keeps GPS and shot tracking running when your screen is off, seamlessly syncing your position to your Wear OS watch at all times.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>⌚ Wear OS Watch App</h3>
+        <p>A dedicated companion app runs on your Wear OS smartwatch, giving you at-a-glance hole distances and shot information right on your wrist — no need to take your phone out of your pocket between shots.</p>
+    </div>
+
+    <!-- ── MAPS & COURSE DATA ── -->
+    <div class="section-title">🗺️ Maps & Course Data</div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🌍 Automatic Course Discovery</h3>
+        <p>HeyCaddyAI automatically searches for golf courses near your location using OpenStreetMap data — no manual setup required. Courses are cached locally so they're available even without a signal on the course.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🗺️ Interactive Hole Maps</h3>
+        <p>Every hole is displayed on a live GPS map with your position updated in real time. The map offers three views:</p>
+        <ul>
+            <li><strong>Hole View</strong> — full overhead view of the hole with hazards, green polygon, and centreline shown as a dashed line.</li>
+            <li><strong>Green View</strong> — zooms into the green area, ideal for approach shot decisions.</li>
+            <li><strong>Planner</strong> — switches to planning mode to lay out your strategy before you play.</li>
+        </ul>
+        <p>A persistent crosshair marker in the centre of the screen lets you instantly read the distance to any point just by panning the map — no tapping required.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>📍 Distances to the Green</h3>
+        <p>Live GPS distances to the front, middle, and back of the green are displayed at all times on the Round tab and hole map. When you're more than 999m from the tee, distances automatically switch to teebox-relative measurements so you never see meaningless large numbers.</p>
+    </div>
+
+    <!-- ── SHOT PLANNING ── -->
+    <div class="section-title">📋 Shot Planning</div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>📋 Course & Shot Planner</h3>
+        <p>Plan your entire round before you tee off. Use the Planner map view to tap and place shot markers anywhere on the hole. Each marker instantly calculates the distance and recommends the right club from your personalised bag. Adjust the marker position and the club recommendation updates automatically.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🎯 Skill Level Targets</h3>
+        <p>A sliding scale from Beginner to Pro adjusts the target zones shown on the planner map, giving you realistic landing areas that match your game rather than a scratch golfer's. Access it via the ⚙️ button on the map screen.</p>
+    </div>
+
+    <!-- ── ROUND TRACKING ── -->
+    <div class="section-title">📊 Round & Stats Tracking</div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🏆 Round Scoring</h3>
+        <p>Track your score hole by hole with a full digital scorecard. Log your score relative to par, plus fairways hit, greens in regulation (GIR), and putts per hole — giving you the same stats a professional caddie would record.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>🎯 Target Side Game</h3>
+        <p>Add a points-based target game to any round. Earn points when your shots land within the target zone for your skill level, creating a fun challenge alongside your main scorecard. The side game toggle and live score are always visible during your round, and results are saved with your round history.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>📜 Round History</h3>
+        <p>Every completed round is saved automatically and accessible from the History screen. Review your hole-by-hole scorecard, fairways hit, GIR percentage, and side game results for any past round at a glance.</p>
+    </div>
+
+    <div class="feature" style="text-align: left;">
+        <h3>📏 Club Statistics</h3>
+        <p>HeyCaddyAI learns your real carry distances over time. Every validated shot contributes to your personal club averages, which are used to fine-tune club recommendations. View your stats per club — average distance, consistency percentage, and number of recorded shots — all in the Stats tab.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 HeyCaddyAI</p>
+    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+    <a href="eula.html" class="legal-link">EULA</a>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyCaddyAI - Your Intelligent Golf Companion</title>
+    <style>
+        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
         
         header { 
             background: #2d5a27; 
